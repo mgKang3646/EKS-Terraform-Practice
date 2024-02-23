@@ -1,4 +1,14 @@
 
+## Terrform으로 EKS 프로비저닝 후, Stateful, Stateless App 배포하기 
+
+
+## 목차
+1. Terraform으로 EKS 구성하기
+2. ALB Ingress Controller 구성하기
+3. AWS EBS CSI Drive 구성하기
+4. Stateful App 배포하기
+5. Stateless App 배포하기
+6. StatefulSet으로 MySQL App 배포하기
 <br>
 <br>
 
@@ -35,7 +45,9 @@
 ![스크린샷 2024-02-23 오후 9 01 20](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/d3eaeb00-8656-42a0-93b5-ba9a0b739c72)
 
 <br>
+
 EKS가 구성되면 EKS 내부 작업은 ‘OAUTH2.0’ 인증인가 방식을 사용한다. IAM이 Client에게 AccessKey와 SecretKey를 넘기지 않고 OIDC ID와 특정 권한을 가진 Service Account로 api-server에 접근하여 K8S의 다양한 작업을 진행할 수 있다.
+
 <br>
 
 
@@ -72,5 +84,20 @@ WordPress App은 PVC로 EBS와 볼륨마운팅하여 State가 유지되는 State
 
 - rollingupdate
 
+https://github.com/mgKang3646/EKS-Terraform-Practice/blob/main/yaml/bluegreen.yaml
+
 - bluegreen
 
+https://github.com/mgKang3646/EKS-Terraform-Practice/blob/main/yaml/rollingupdate.yaml
+
+<br>
+<br>
+
+
+## 6. StatefulSet으로 MySQL App 배포하기
+
+![image](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/3b1c0f5d-0939-4bb6-b3f5-ee04df8042ff)
+
+<br>
+
+StatefulSet으로 replicas를 3으로 설정하면 POD 당 PVC-PV가 하나씩 만들어진다. POD가 동일하여 로드밸런싱 되는 것이 아니라 독립적인 영역이 존재하여 트래픽이 로드밸런싱 되면 안된다. 그러므로 서비스는 로드밸런싱을 지원하지 않는 Headless-Service로 해야 한다
