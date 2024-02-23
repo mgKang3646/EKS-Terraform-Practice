@@ -1,7 +1,6 @@
 <div align="center">
-<h1>EKS-Terraform-Practice</h1>
+<h3>Terrform으로 EKS 프로비저닝 후 Stateful & Stateless App 배포하기</h3>
 <br>
-<h3> Terrform으로 EKS 프로비저닝 후 Stateful & Stateless App 배포하기 </h3>
 </div>
 
 ## Terraform으로 EKS 구성하기
