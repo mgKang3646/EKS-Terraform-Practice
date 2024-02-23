@@ -1,8 +1,8 @@
 
-# Terrform으로 EKS 프로비저닝 후, Stateful, Stateless App 배포하기 <br>
+## Terrform으로 EKS 프로비저닝 후, Stateful, Stateless App 배포하기 <br>
 
 
-## 목차
+목차
 1. Terraform으로 EKS 구성하기
 2. ALB Ingress Controller 구성하기
 3. AWS EBS CSI Drive 구성하기
