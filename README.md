@@ -40,7 +40,6 @@ EKS가 구성되면 EKS 내부 작업은 ‘OAUTH2.0’ 인증인가 방식을 �
 
 
 ![스크린샷 2024-02-23 오후 9 02 43](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/7c251c9f-98f8-4ae7-b83e-b8b25bb76655)
-![스크린샷 2024-02-23 오후 9 03 14](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/aa464ddc-def1-45cf-b300-0b2cfe7bce9f)
 
 <br>
 
@@ -52,7 +51,6 @@ ALB Ingress Controller는 Service Account의 OIDC로 인증하고 부여된 Role
 ## 3.AWS EBS CSI Drive 구성하기
 
 ![스크린샷 2024-02-23 오후 9 04 04](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/3d747e8a-c201-4b89-b29d-ef6eb04bc29e)
-![스크린샷 2024-02-23 오후 9 04 45](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/ba974758-e06f-4147-bb9d-2c9ad479cb81)
 
 <br>
 
