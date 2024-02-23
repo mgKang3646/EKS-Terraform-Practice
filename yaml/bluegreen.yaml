@@ -1,0 +1,61 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: bluegreen
+spec:
+  selector:
+    name: bluegreen
+    color: blue
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-deploy
+  labels:
+    name: bluegreen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: bluegreen
+      color: blue
+  template:
+    metadata:
+      labels:
+        name: bluegreen
+        color: blue
+    spec:
+      containers:
+      - name: bluegreen
+        image: lordofkangs/blue_image
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-deploy
+  labels:
+    name: bluegreen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: bluegreen
+      color: green
+  template:
+    metadata:
+      labels:
+        name: bluegreen
+        color: green
+    spec:
+      containers:
+      - name: bluegreen
+        image: lordofkangs/green_image
+        ports:
+        - containerPort: 80

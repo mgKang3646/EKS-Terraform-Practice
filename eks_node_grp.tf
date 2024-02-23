@@ -1,16 +1,3 @@
-# resource "aws_instance" "kubectl-server" {
-#   ami                         = "ami-086cae3329a3f7d75"
-#   key_name                    = "kubectl-pem"
-#   instance_type               = "t2.micro"
-#   associate_public_ip_address = true
-#   subnet_id                   = aws_subnet.public-eks-subnet-1.id
-#   vpc_security_group_ids      = [aws_security_group.allow_tls.id]
-
-#   tags = {
-#     Name = "kubectl"
-#   }
-# }
-
 resource "aws_eks_node_group" "node-grp" {
   cluster_name    = aws_eks_cluster.eks.name
   node_group_name = "pc-node-group"
