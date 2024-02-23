@@ -1,5 +1,5 @@
 <div align="center">
-<h3>Terrform으로 EKS 프로비저닝 후 Stateful & Stateless App 배포하기</h3>
+<h1>Terrform으로 EKS 프로비저닝 후 Stateful & Stateless App 배포하기</h1>
 <br>
 </div>
 
