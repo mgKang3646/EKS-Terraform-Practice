@@ -31,7 +31,9 @@
 ## 2.ALB Ingress Controller 구성하기
 
 <br>
+
 ![스크린샷 2024-02-23 오후 9 01 20](https://github.com/mgKang3646/Terraform-AWS-Practice/assets/80077569/d3eaeb00-8656-42a0-93b5-ba9a0b739c72)
+
 <br>
 EKS가 구성되면 EKS 내부 작업은 ‘OAUTH2.0’ 인증인가 방식을 사용한다. IAM이 Client에게 AccessKey와 SecretKey를 넘기지 않고 OIDC ID와 특정 권한을 가진 Service Account로 api-server에 접근하여 K8S의 다양한 작업을 진행할 수 있다.
 <br>
