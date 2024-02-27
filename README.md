@@ -80,12 +80,11 @@ WordPress App은 PVC로 EBS와 볼륨마운팅하여 State가 유지되는 State
 ## 5. Stateless App 배포하기 
 
 - rollingupdate
+https://github.com/mgKang3646/EKS-Terraform-Practice/blob/main/yaml/rollingupdate.yaml
 
-https://github.com/mgKang3646/EKS-Terraform-Practice/blob/main/yaml/bluegreen.yaml
 
 - bluegreen
-
-https://github.com/mgKang3646/EKS-Terraform-Practice/blob/main/yaml/rollingupdate.yaml
+https://github.com/mgKang3646/EKS-Terraform-Practice/blob/main/yaml/bluegreen.yaml
 
 <br>
 <br>
